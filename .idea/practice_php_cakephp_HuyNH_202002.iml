@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/book_management/src" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/book_management/vendor/cakephp/cakephp/tests" isTestSource="true" packagePrefix="Cake\Test\" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/book_management/tests" isTestSource="true" packagePrefix="App\Test\" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/aura/intl" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/cakephp/bake" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/cakephp/cakephp" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/cakephp/cakephp-codesniffer" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/cakephp/chronos" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/cakephp/debug_kit" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/cakephp/migrations" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/cakephp/plugin-installer" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/dnoegel/php-xdg-base-dir" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/jakub-onderka/php-console-color" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/jakub-onderka/php-console-highlighter" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/jasny/twig-extensions" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/jdorn/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/josegonzalez/dotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/justinrainbow/json-schema" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/laminas/laminas-diactoros" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/laminas/laminas-httphandlerrunner" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/laminas/laminas-zendframework-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/m1/env" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/mobiledetect/mobiledetectlib" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/phpdocumentor/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/phpspec/prophecy" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/phpstan/phpdoc-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/phpunit/php-token-stream" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/psr/http-server-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/psr/http-server-middleware" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/robmorgan/phinx" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/sebastian/resource-operations" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/sebastian/type" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/seld/jsonlint" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/seld/phar-utils" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/slevomat/coding-standard" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/squizlabs/php_codesniffer" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/symfony/config" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/symfony/filesystem" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/twig/markdown-extra" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/twig/twig" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/wyrihaximus/twig-view" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
