@@ -17,10 +17,10 @@
 <?= $this->element('header'); ?>
 <?= $this->fetch('content'); ?>
 <?= $this->element('footer'); ?>
-<script src="book/js/jquery.min.js"></script>
-<script src="book/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="book/js/owl.carousel.min.js"></script>
-<script src="book/js/custom.js"></script>
+<?= $this->Html->script('jquery.min.js'); ?>
+<?= $this->Html->script('bootstrap.min.js'); ?>
+<?= $this->Html->script('owl.carousel.min.js'); ?>
+<?= $this->Html->script('custom.js'); ?>
 </body>
 
 </html>
