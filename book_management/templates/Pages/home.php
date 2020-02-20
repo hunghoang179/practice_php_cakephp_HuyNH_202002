@@ -24,7 +24,7 @@ $this->disableAutoLayout();
 
 if (!Configure::read('debug')) :
     throw new NotFoundException(
-        'Please replace templates/Pages/home.php with your own version or re-enable debug mode.'
+        'Please replace templates/Pages/homes.php with your own version or re-enable debug mode.'
     );
 endif;
 
@@ -46,7 +46,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 
     <?= $this->Html->css('milligram.min.css') ?>
     <?= $this->Html->css('cake.css') ?>
-    <?= $this->Html->css('home.css') ?>
+    <?= $this->Html->css('homes.css') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>

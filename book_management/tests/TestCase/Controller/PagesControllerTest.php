@@ -49,7 +49,7 @@ class PagesControllerTest extends TestCase
      */
     public function testDisplay()
     {
-        $this->get('/pages/home');
+        $this->get('/pages/homes');
         $this->assertResponseOk();
         $this->assertResponseContains('CakePHP');
         $this->assertResponseContains('<html>');
@@ -104,7 +104,7 @@ class PagesControllerTest extends TestCase
      */
     public function testCsrfAppliedError()
     {
-        $this->post('/pages/home', ['hello' => 'world']);
+        $this->post('/pages/homes', ['hello' => 'world']);
 
         $this->assertResponseCode(403);
         $this->assertResponseContains('CSRF');
@@ -118,7 +118,7 @@ class PagesControllerTest extends TestCase
     public function testCsrfAppliedOk()
     {
         $this->enableCsrfToken();
-        $this->post('/pages/home', ['hello' => 'world']);
+        $this->post('/pages/homes', ['hello' => 'world']);
 
         $this->assertResponseCode(200);
         $this->assertResponseContains('CakePHP');
