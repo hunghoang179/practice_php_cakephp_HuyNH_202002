@@ -45,7 +45,11 @@
                         </div>
                         <div class="form-group">
                             <label class="label-form">Ảnh đại diện: <span class="required-label-star">*</span></label>
-                                                    <input type="file" placeholder="Chọn ảnh đại diện cho sách" required>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFile">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+<!--                                                    <input type="file" placeholder="Chọn ảnh đại diện cho sách" required>-->
                             <!--                        <input type="file" class="form-control-file" id="exampleFormControlFile1">-->
 <!--                            <img src="https://i.pinimg.com/236x/8c/76/84/8c7684a537cb68910ae1eadaea4d1303.jpg">-->
                         </div>
