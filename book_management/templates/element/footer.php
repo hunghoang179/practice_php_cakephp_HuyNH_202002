@@ -20,19 +20,10 @@
                 <div class="navigation">
                     <h4>Navigation</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-conditions.html">Terms</a></li>
-                        <li><a href="products.html">Products</a></li>
-                    </ul>
-                </div>
-                <div class="navigation">
-                    <h4>Help</h4>
-                    <ul>
-                        <li><a href="">Shipping & Returns</a></li>
-                        <li><a href="privacy-policy.html">Privacy</a></li>
-                        <li><a href="faq.html">FAQ’s</a></li>
+                        <li><a href=<?= $this->Url->build(['controller'=>'homes','action'=>'home']) ?>>Home</a></li>
+                        <li><a href=<?= $this->Url->build(['controller'=>'homes','action'=>'about']) ?>>About Us</a></li>
+                        <li><a href=<?= $this->Url->build(['controller'=>'homes','action'=>'book']) ?>>Products</a></li>
+                        <li><a href=<?= $this->Url->build(['controller'=>'homes','action'=>'faq']) ?>>FAQ’s</a></li>
                     </ul>
                 </div>
             </div>

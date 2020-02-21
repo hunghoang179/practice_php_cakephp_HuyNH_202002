@@ -31,4 +31,25 @@ class HomesController extends AppController{
     public function faq(){
 
     }
+
+    public function resetPassword(){
+
+    }
+
+    public function notificationResetPassword(){
+
+    }
+
+    public function updateUser(){
+
+    }
+
+
+    public function listUser(){
+
+    }
+
+    public function listBorrow(){
+
+    }
 }

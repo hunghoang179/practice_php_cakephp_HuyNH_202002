@@ -2,6 +2,7 @@
     <div class="container">
         <a class="breadcrumb-item" href=<?= $this->Url->build(['controller'=>'homes','action'=>'home']) ?>>Trang chủ</a>
         <span class="breadcrumb-item active">Sách</span>
+        <a class="add-content" href=<?= $this->Url->build(['controller'=>'Books','action'=>'add']) ?>>Thêm sách</a>
     </div>
 </div>
 <section class="static about-sec">

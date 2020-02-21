@@ -1,0 +1,21 @@
+.btn-delete{
+    background: #da1111;
+}
+
+.btn-edit{
+    background: #ea9050;
+}
+
+.btn-action{
+    padding: 2px 5px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+
+table.list-user thead th{
+    background: #a9a9a959;
+}

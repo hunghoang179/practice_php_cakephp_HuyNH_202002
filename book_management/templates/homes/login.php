@@ -7,21 +7,21 @@
 <section class="static about-sec">
     <div class="container">
         <h1>Tài khoản của tôi / Đăng nhập</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and scrambled it to make a type specimen book. It has survived not only fiveLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem </p>
+        <p>Vui lòng nhập địa chỉ email và mật khẩu của bạn để đăng nhập vào hệ thống. </p>
         <div class="form">
             <form>
                 <div class="row">
                     <div class="col-md-5">
-                        <input placeholder="Enter User Name" required>
+                        <input type="email" placeholder="Nhập địa chỉ email" required>
                         <span class="required-star">*</span>
                     </div>
                     <div class="col-md-5">
-                        <input type="email" placeholder="Enter Email Address" required>
+                        <input type="password" placeholder="Nhập mật khẩu" required>
                         <span class="required-star">*</span>
                     </div>
                     <div class="col-lg-8 col-md-12">
                         <button class="btn black">Đăng nhập</button>
-                        <h5>Nếu chưa đăng ký? <a href=<?= $this->Url->build(['controller'=>'homes','action'=>'register']) ?>>Đăng ký ở đây</a></h5>
+                        <h5><a href=<?= $this->Url->build(['controller'=>'homes','action'=>'register']) ?>>Đăng ký</a> <span class="space">|</span> <a href=<?= $this->Url->build(['controller'=>'homes','action'=>'resetPassword']) ?>>Quên mật khẩu</a></h5>
                     </div>
                 </div>
             </form>

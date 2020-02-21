@@ -64,11 +64,19 @@ $routes->scope('/', function (RouteBuilder $builder) {
      */
     $builder->connect('/', ['controller' => 'Homes', 'action' => 'home']);
     $builder->connect('/login', ['controller' => 'Homes', 'action' => 'login']);
+    $builder->connect('/reset-password', ['controller' => 'Homes', 'action' => 'resetPassword']);
+    $builder->connect('/reset-password/notification', ['controller' => 'Homes', 'action' => 'notificationResetPassword']);
+    $builder->connect('/update-user', ['controller' => 'Homes', 'action' => 'updateUser']);
+    $builder->connect('/list-user', ['controller' => 'Homes', 'action' => 'listUser']);
     $builder->connect('/register', ['controller' => 'Homes', 'action' => 'register']);
     $builder->connect('/about', ['controller' => 'Homes', 'action' => 'about']);
     $builder->connect('/faq', ['controller' => 'Homes', 'action' => 'faq']);
+    $builder->connect('/list-borrow', ['controller' => 'Homes', 'action' => 'listBorrow']);
     $builder->connect('/list-book', ['controller' => 'Homes', 'action' => 'book']);
     $builder->connect('/books/detail', ['controller' => 'Books', 'action' => 'detail']);
+    $builder->connect('/books/add', ['controller' => 'Books', 'action' => 'add']);
+    $builder->connect('/category/list', ['controller' => 'Categories', 'action' => 'listCategory']);
+    $builder->connect('/category/add', ['controller' => 'Categories', 'action' => 'add']);
 
     /*
      * ...and connect the rest of 'Pages' controller's URLs.

@@ -4,13 +4,13 @@ namespace App\Controller;
 use Cake\Event\EventInterface;
 
 
-class BooksController extends AppController{
+class CategoriesController extends AppController{
     public function beforeFilter(EventInterface $event){
         $this->viewBuilder()->setLayout('master');
     }
 
-    public function detail(){
-//        exit("homes");
+    public function listCategory(){
+
     }
 
     public function add(){
