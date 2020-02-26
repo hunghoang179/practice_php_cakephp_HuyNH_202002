@@ -16,16 +16,16 @@
 <!--            <form>-->
                 <div class="row">
                     <div class="col-md-5">
-                        <input type="email" placeholder="Nhập địa chỉ email" name="email">
+                        <input type="email" placeholder="Nhập địa chỉ email" name="email" required>
                         <span class="required-star">*</span>
                     </div>
                     <div class="col-md-5">
-                        <input type="password" placeholder="Nhập mật khẩu" name="password">
+                        <input type="password" placeholder="Nhập mật khẩu" name="password" required>
                         <span class="required-star">*</span>
                     </div>
                     <div class="col-lg-8 col-md-12">
                         <button type="submit" class="btn black">Đăng nhập</button>
-                        <h5><a href=<?= $this->Url->build(['controller'=>'homes','action'=>'register']) ?>>Đăng ký</a> <span class="space">|</span> <a href=<?= $this->Url->build(['controller'=>'homes','action'=>'resetPassword']) ?>>Quên mật khẩu</a></h5>
+                        <h5><a href=<?= $this->Url->build(['controller'=>'users','action'=>'register']) ?>>Đăng ký</a> <span class="space">|</span> <a href=<?= $this->Url->build(['controller'=>'homes','action'=>'resetPassword']) ?>>Quên mật khẩu</a></h5>
                     </div>
                 </div>
             <?= $this->Form->end() ?>

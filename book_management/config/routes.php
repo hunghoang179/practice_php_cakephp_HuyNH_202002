@@ -64,12 +64,13 @@ $routes->scope('/', function (RouteBuilder $builder) {
      */
     $builder->connect('/', ['controller' => 'Users', 'action' => 'home']);
     $builder->connect('/login', ['controller' => 'Users', 'action' => 'login']);
+    $builder->connect('/register', ['controller' => 'Users', 'action' => 'register']);
+    $builder->connect('/verified/{id}', ['controller' => 'Users', 'action' => 'verified']);
     $builder->connect('/logout', ['controller' => 'Users', 'action' => 'logout']);
     $builder->connect('/reset-password', ['controller' => 'Homes', 'action' => 'resetPassword']);
     $builder->connect('/reset-password/notification', ['controller' => 'Homes', 'action' => 'notificationResetPassword']);
     $builder->connect('/update-user', ['controller' => 'Homes', 'action' => 'updateUser']);
     $builder->connect('/list-user', ['controller' => 'Homes', 'action' => 'listUser']);
-    $builder->connect('/register', ['controller' => 'Homes', 'action' => 'register']);
     $builder->connect('/about', ['controller' => 'Homes', 'action' => 'about']);
     $builder->connect('/faq', ['controller' => 'Homes', 'action' => 'faq']);
     $builder->connect('/list-borrow', ['controller' => 'Homes', 'action' => 'listBorrow']);

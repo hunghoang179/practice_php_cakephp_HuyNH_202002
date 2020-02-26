@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 use Cake\Event\EventInterface;
+use Cake\ORM\TableRegistry;
 
 class HomesController extends AppController{
     public function beforeFilter(EventInterface $event){
@@ -17,10 +18,6 @@ class HomesController extends AppController{
     }
 
     public function login(){
-
-    }
-
-    public function register(){
 
     }
 
@@ -46,7 +43,11 @@ class HomesController extends AppController{
 
 
     public function listUser(){
-
+        $articles = TableRegistry::getTableLocator()->get('Users');
+        $query = $articles->find('all')
+        ->order('Users.id ASC');
+//        dd($this->paginate($query,['limit'=>5]));
+        $this->set('users',$this->paginate($query,['limit'=>5]));
     }
 
     public function listBorrow(){

@@ -33,6 +33,9 @@
                             <a href=<?= $this->Url->build(['controller'=>'homes','action'=>'faq']) ?> class="nav-link">FQA</a>
                         </li>
                         <li class="navbar-item">
+                            <a href=<?= $this->Url->build(['controller'=>'homes','action'=>'listUser']) ?> class="nav-link">DS Tài khoản</a>
+                        </li>
+                        <li class="navbar-item">
 <!--                            <div class="btn-group">-->
 <!--                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
 <!--                                    Action-->

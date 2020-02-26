@@ -1,0 +1,15 @@
+.container div.message.error{
+    color: #101010;
+    font-size: 20px;
+    background: #ff00003b;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.container div.message.success{
+    color: #101010;
+    font-size: 20px;
+    background: #a5e2b3;
+    border-radius: 5px;
+    padding: 10px;
+}

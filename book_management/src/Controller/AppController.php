@@ -82,10 +82,7 @@ class AppController extends Controller
 
     public function beforeFilter(EventInterface $event){
         $this->Auth->allow('home');
-//        var_dump($this->Auth->user('total_name'));
-//        $this->set('username',$this->Auth->user('total_name'));
+        $this->Auth->allow('register');
+        $this->Auth->allow('verified');
     }
-//    public function beforeFilter() {
-//        Security::setHash('md5');
-//    }
 }

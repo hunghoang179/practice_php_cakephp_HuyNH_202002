@@ -205,21 +205,26 @@ return [
      */
     'EmailTransport' => [
         'default' => [
+//            'host' => 'smtp.mailtrap.io',
+//            'port' => 587,
+//            'username' => '7685da1264e1c3',
+//            'password' => '94b416f1873446',
+//            'className' => 'Smtp'
             'className' => MailTransport::class,
             /*
              * The keys host, port, timeout, username, password, client and tls
              * are used in SMTP transports
              */
-            'host' => 'localhost',
-            'port' => 25,
+            'host' => 'smtp.mailtrap.io',
+            'port' => 2525,
             'timeout' => 30,
             /*
              * It is recommended to set these options through your environment or app_local.php
              */
-            //'username' => null,
-            //'password' => null,
+            'username' => 'huynguyenhuubk2.02.3@gmail.com',
+            'password' => null,
             'client' => null,
-            'tls' => false,
+            'tls' => true,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
         ],
     ],
@@ -236,7 +241,7 @@ return [
     'Email' => [
         'default' => [
             'transport' => 'default',
-            'from' => 'you@localhost',
+            'from' => 'huynguyenhuubk2.02.3@gmail.com',
             /*
              * Will by default be set to config value of App.encoding, if that exists otherwise to UTF-8.
              */

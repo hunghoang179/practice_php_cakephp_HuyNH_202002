@@ -59,4 +59,10 @@ class User extends Entity
     protected $_hidden = [
         'password',
     ];
+
+    public static $convert_to_status=array(
+        1=>'Hoạt động',
+        0=>'Chưa xác thực',
+        2=>'Khóa'
+    );
 }

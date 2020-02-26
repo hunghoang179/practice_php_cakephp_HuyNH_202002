@@ -22,40 +22,32 @@
             </tr>
             </thead>
             <tbody>
+            <?php
+            foreach ($users as $user):
+            ?>
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>maddhhđ@gmail.com</td>
-                <td>0965236584</td>
-                <td>âfsfsđbshhhhhhhhhcbcbbss</td>
-                <td>Hoàn kiếm - Hà nội</td>
-                <td class="number-borrow"><span>5</span></td>
-                <td><span>Hoạt động</span></td>
+                <th scope="row"><?php echo $user->id ?></th>
+                <td><?php echo $user->total_name ?></td>
+                <td><?php echo $user->email ?></td>
+                <td><?php echo $user->phone ?></td>
+                <td><?php echo $user->password ?></td>
+                <td><?php echo $user->address ?></td>
+                <td class="number-borrow"><span><?php echo $user->number_borrowed_books ?></span></td>
+                <td><span><?php if ($user->status===0) echo "Chưa xác thực";
+                        elseif ($user->status===1) echo "Hoạt động";
+                        else echo "Khóa";?></span></td>
                 <td><button class="btn-action btn-delete">Xóa</button><button class="btn-action btn-edit">Sửa</button></td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Mark</td>
-                <td>maddhhđ@gmail.com</td>
-                <td>0965236584</td>
-                <td>âfsfsđbshhhhhhhhhcbcbbss</td>
-                <td>Hoàn kiếm - Hà nội</td>
-                <td class="number-borrow"><span>5</span></td>
-                <td><span>Hoạt động</span></td>
-                <td><button class="btn-action btn-delete">Xóa</button><button class="btn-action btn-edit">Sửa</button></td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Mark</td>
-                <td>maddhhđ@gmail.com</td>
-                <td>0965236584</td>
-                <td>âfsfsđbshhhhhhhhhcbcbbss</td>
-                <td>Hoàn kiếm - Hà nội</td>
-                <td class="number-borrow"><span>5</span></td>
-                <td><span>Hoạt động</span></td>
-                <td><button class="btn-action btn-delete">Xóa</button><button class="btn-action btn-edit">Sửa</button></td>
-            </tr>
+            <?php
+            endforeach;
+            ?>
             </tbody>
         </table>
-    </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+            <?= $this->Paginator->prev("<<") ?>
+            <?= $this->Paginator->numbers() ?>
+            <?= $this->Paginator->next(">>") ?>
+            </ul>
+        </nav>
 </section>
