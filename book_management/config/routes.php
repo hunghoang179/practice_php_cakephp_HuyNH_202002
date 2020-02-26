@@ -62,8 +62,9 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * its action called 'display', and we pass a param to select the view file
      * to use (in this case, templates/Pages/homes.php)...
      */
-    $builder->connect('/', ['controller' => 'Homes', 'action' => 'home']);
-    $builder->connect('/login', ['controller' => 'Homes', 'action' => 'login']);
+    $builder->connect('/', ['controller' => 'Users', 'action' => 'home']);
+    $builder->connect('/login', ['controller' => 'Users', 'action' => 'login']);
+    $builder->connect('/logout', ['controller' => 'Users', 'action' => 'logout']);
     $builder->connect('/reset-password', ['controller' => 'Homes', 'action' => 'resetPassword']);
     $builder->connect('/reset-password/notification', ['controller' => 'Homes', 'action' => 'notificationResetPassword']);
     $builder->connect('/update-user', ['controller' => 'Homes', 'action' => 'updateUser']);

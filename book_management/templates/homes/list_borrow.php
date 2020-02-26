@@ -1,7 +1,7 @@
 <?= $this->Html->css('list_borrow.css'); ?>
 <div class="breadcrumb">
     <div class="container">
-        <a class="breadcrumb-item" href=<?= $this->Url->build(['controller'=>'homes','action'=>'home']) ?>>Trang chủ</a>
+        <a class="breadcrumb-item" href=<?= $this->Url->build(['controller'=>'users','action'=>'home']) ?>>Trang chủ</a>
         <span class="breadcrumb-item active">Danh sách mượn sách</span>
     </div>
 </div>

@@ -1,6 +1,6 @@
 <div class="breadcrumb">
     <div class="container">
-        <a class="breadcrumb-item" href=<?= $this->Url->build(['controller'=>'homes','action'=>'home']) ?>>Trang chủ</a>
+        <a class="breadcrumb-item" href=<?= $this->Url->build(['controller'=>'users','action'=>'home']) ?>>Trang chủ</a>
         <span class="breadcrumb-item active">Đăng ký</span>
     </div>
 </div>
@@ -37,7 +37,7 @@
                     </div>
                     <div class="col-lg-8 col-md-12">
                         <button class="btn black">Đăng ký</button>
-                        <h5><a href=<?= $this->Url->build(['controller'=>'homes','action'=>'login']) ?>>Đăng nhập</a></h5>
+                        <h5><a href=<?= $this->Url->build(['controller'=>'users','action'=>'login']) ?>>Đăng nhập</a></h5>
                     </div>
                 </div>
             </form>

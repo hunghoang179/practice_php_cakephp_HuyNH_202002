@@ -17,6 +17,8 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Cake\Controller\Controller;
+use Cake\Event\Event;
+use Cake\Event\EventInterface;
 
 /**
  * Application Controller
@@ -43,6 +45,29 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        $this->loadComponent('Auth',[
+            'loginRedirect'=>[
+                    'controller'=>'Users',
+                    'action'=>'home'
+                ],
+            'authenticate'=>[
+                'Form'=>[
+                    'fields'=>[
+                        'username' => 'email',
+                        'password' => 'password'],
+                    'passwordHasher' => [
+                        'className' => 'Legacy',
+                    ]
+//                    'passwordHasher' => [
+//                        'className' => 'Fallback',
+//                        'hashers' => [
+//                            'Default',
+//                            'Weak' => ['hashType' => 'md5']
+//                        ]
+//                    ]
+                ]
+            ]
+        ]);
 
         /*
          * Enable the following component for recommended CakePHP form protection settings.
@@ -50,4 +75,17 @@ class AppController extends Controller
          */
         //$this->loadComponent('FormProtection');
     }
+
+    public function beforeRender(EventInterface $event) {
+        $this->set('username', $this->Auth->user('total_name'));
+    }
+
+    public function beforeFilter(EventInterface $event){
+        $this->Auth->allow('home');
+//        var_dump($this->Auth->user('total_name'));
+//        $this->set('username',$this->Auth->user('total_name'));
+    }
+//    public function beforeFilter() {
+//        Security::setHash('md5');
+//    }
 }
