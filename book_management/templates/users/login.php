@@ -25,7 +25,7 @@
                     </div>
                     <div class="col-lg-8 col-md-12">
                         <button type="submit" class="btn black">Đăng nhập</button>
-                        <h5><a href=<?= $this->Url->build(['controller'=>'users','action'=>'register']) ?>>Đăng ký</a> <span class="space">|</span> <a href=<?= $this->Url->build(['controller'=>'homes','action'=>'resetPassword']) ?>>Quên mật khẩu</a></h5>
+                        <h5><a href=<?= $this->Url->build(['controller'=>'users','action'=>'register']) ?>>Đăng ký</a> <span class="space">|</span> <a href=<?= $this->Url->build(['controller'=>'users','action'=>'resetPassword']) ?>>Quên mật khẩu</a></h5>
                     </div>
                 </div>
             <?= $this->Form->end() ?>

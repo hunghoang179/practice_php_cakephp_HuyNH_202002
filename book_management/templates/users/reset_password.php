@@ -7,20 +7,21 @@
 <section class="static about-sec">
     <div class="container">
         <h1>Tài khoản của tôi / Lấy lại mật khẩu</h1>
-        <p>Nhập vào địa chỉ Email trong tài khoản muốn lấy lại mật khẩu của bạn. </p>
+        <p>Nhập vào địa chỉ Email đã đăng ký tài khoản của bạn. </p>
+        <?= $this->Flash->render() ?>
         <div class="form">
-            <form>
+            <?= $this->Form->create() ?>
                 <div class="row">
                     <div class="col-md-6">
                         <label class="label-form">Địa chỉ email: <span class="required-label-star">*</span></label>
-                        <input type="email" placeholder="Nhập email của bạn" required>
+                        <input type="email" placeholder="Nhập email của bạn" name="email" required>
                     </div>
                     <div class="col-lg-8 col-md-12">
                         <button class="btn black">Tiếp tục</button>
-                        <h5><a href=<?= $this->Url->build(['controller'=>'homes','action'=>'login']) ?>>Đăng nhập</a></h5>
+                        <h5><a href=<?= $this->Url->build(['controller'=>'users','action'=>'login']) ?>>Đăng nhập</a></h5>
                     </div>
                 </div>
-            </form>
+            <?= $this->Form->end() ?>
         </div>
     </div>
 </section>

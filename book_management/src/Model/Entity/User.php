@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use Authentication\PasswordHasher\DefaultPasswordHasher;
+use Cake\Utility\Security;
 
 /**
  * User Entity
@@ -60,9 +62,15 @@ class User extends Entity
         'password',
     ];
 
-    public static $convert_to_status=array(
-        1=>'Hoạt động',
-        0=>'Chưa xác thực',
-        2=>'Khóa'
-    );
+//    protected function _setPassword(string $password)
+//    {
+//        $hasher = new DefaultPasswordHasher();
+//        return $hasher->hash($password);
+//    }
+
+//    protected function _setPassword(string $password)
+//    {
+////        $hasher = new DefaultPasswordHasher();
+//        return Security::hash($password,'md5',false);
+//    }
 }

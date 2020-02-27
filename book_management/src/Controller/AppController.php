@@ -45,29 +45,7 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-        $this->loadComponent('Auth',[
-            'loginRedirect'=>[
-                    'controller'=>'Users',
-                    'action'=>'home'
-                ],
-            'authenticate'=>[
-                'Form'=>[
-                    'fields'=>[
-                        'username' => 'email',
-                        'password' => 'password'],
-                    'passwordHasher' => [
-                        'className' => 'Legacy',
-                    ]
-//                    'passwordHasher' => [
-//                        'className' => 'Fallback',
-//                        'hashers' => [
-//                            'Default',
-//                            'Weak' => ['hashType' => 'md5']
-//                        ]
-//                    ]
-                ]
-            ]
-        ]);
+        $this->loadComponent('Authentication.Authentication');
 
         /*
          * Enable the following component for recommended CakePHP form protection settings.
@@ -77,12 +55,23 @@ class AppController extends Controller
     }
 
     public function beforeRender(EventInterface $event) {
-        $this->set('username', $this->Auth->user('total_name'));
+        $user=$this->Authentication->getIdentity();
+        $this->set('username', isset($user->id)?$user->total_name:null);
     }
 
-    public function beforeFilter(EventInterface $event){
-        $this->Auth->allow('home');
-        $this->Auth->allow('register');
-        $this->Auth->allow('verified');
+//    public function beforeFilter(EventInterface $event){
+//        $this->Auth->allow('home');
+//        $this->Auth->allow('register');
+//        $this->Auth->allow('verified');
+//        $this->Auth->allow('resetPassword');
+//        $this->Auth->allow('notificationResetPassword');
+//        $this->Authentication->allowUnauthenticated(['view', 'index']);
+//    }
+    public function beforeFilter(EventInterface $event)
+    {
+//        parent::beforeFilter($event);
+//        $this->Authentication->allow('home');
+        $this->Authentication->allowUnauthenticated(['login','home','register','resetPassword','verified','notificationResetPassword']);
+//        $this->Authentication->allowUnauthenticated(['register']);
     }
 }

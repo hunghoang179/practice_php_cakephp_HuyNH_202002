@@ -29,18 +29,6 @@ class HomesController extends AppController{
 
     }
 
-    public function resetPassword(){
-
-    }
-
-    public function notificationResetPassword(){
-
-    }
-
-    public function updateUser(){
-
-    }
-
 
     public function listUser(){
         $articles = TableRegistry::getTableLocator()->get('Users');

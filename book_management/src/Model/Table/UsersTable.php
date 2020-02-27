@@ -166,6 +166,91 @@ class UsersTable extends Table
         return $validator;
     }
 
+    public function validationResetPass(Validator $validator): Validator
+    {
+        $validator
+            ->email('email',false,'Email không đúng định dạng')
+            ->requirePresence('email', 'create','Email cần phải có')
+            ->notEmptyString('email','Email không thể để trống');
+
+        return $validator;
+    }
+
+    public function validationUpdateInfoUser(Validator $validator): Validator
+    {
+        $validator
+            ->email('email',false,'Email không đúng định dạng.')
+            ->requirePresence('email', 'create','Email cần phải có.')
+            ->notEmptyString('email','Email không thể để trống.');
+
+        $validator
+            ->scalar('password','Lỗi mật khẩu.')
+            ->maxLength('password', 255,'Mật khẩu quá dài.')
+            ->requirePresence('password', 'create','Mật khẩu cần phải có.')
+            ->notEmptyString('password','Mật khẩu không thể để trống.');
+
+        $validator
+            ->scalar('total_name','Lỗi Tên đầy đủ.')
+            ->maxLength('total_name', 100, 'Tên quá dài. Vui lòng đặt tên đầy đủ ngắn hơn.')
+            ->requirePresence('total_name', 'create', 'Tên đầy đủ cần phải có.')
+            ->notEmptyString('total_name','Tên đầy đủ không thể để trống');
+
+        $validator
+            ->scalar('phone', 'Lỗi số điện thoại.')
+            ->maxLength('phone', 20,'Số điện thoại quá dài.')
+            ->minLength('phone', 10,'Số điện thoại quá ngắn.')
+            ->requirePresence('phone', 'create','Số điện thoại cần phải có.')
+            ->notEmptyString('phone','Số điện thoại không thể để trống.');
+
+        $validator
+            ->scalar('address', 'Lỗi địa chỉ.')
+            ->maxLength('address', 191,'Địa chỉ quá dài.')
+            ->requirePresence('address', 'create','Địa chỉ cần phải có.')
+            ->notEmptyString('address','Địa chỉ không thể để trống.');
+        return $validator;
+    }
+
+
+    public function validationUpdateInfoUserHasPass(Validator $validator): Validator
+    {
+        $validator
+            ->email('email',false,'Email không đúng định dạng.')
+            ->requirePresence('email', 'create','Email cần phải có.')
+            ->notEmptyString('email','Email không thể để trống.');
+
+        $validator
+            ->scalar('new_password','Lỗi mật khẩu.')
+            ->maxLength('new_password', 255,'Mật khẩu quá dài.')
+            ->requirePresence('new_password', 'create','Mật khẩu cần phải có.')
+            ->notEmptyString('new_password','Mật khẩu không thể để trống.');
+
+        $validator
+            ->scalar('password','Lỗi mật khẩu.')
+            ->maxLength('password', 255,'Mật khẩu quá dài.')
+            ->requirePresence('password', 'create','Mật khẩu cần phải có.')
+            ->notEmptyString('password','Mật khẩu không thể để trống.');
+
+        $validator
+            ->scalar('total_name','Lỗi Tên đầy đủ.')
+            ->maxLength('total_name', 100, 'Tên quá dài. Vui lòng đặt tên đầy đủ ngắn hơn.')
+            ->requirePresence('total_name', 'create', 'Tên đầy đủ cần phải có.')
+            ->notEmptyString('total_name','Tên đầy đủ không thể để trống');
+
+        $validator
+            ->scalar('phone', 'Lỗi số điện thoại.')
+            ->maxLength('phone', 20,'Số điện thoại quá dài.')
+            ->minLength('phone', 10,'Số điện thoại quá ngắn.')
+            ->requirePresence('phone', 'create','Số điện thoại cần phải có.')
+            ->notEmptyString('phone','Số điện thoại không thể để trống.');
+
+        $validator
+            ->scalar('address', 'Lỗi địa chỉ.')
+            ->maxLength('address', 191,'Địa chỉ quá dài.')
+            ->requirePresence('address', 'create','Địa chỉ cần phải có.')
+            ->notEmptyString('address','Địa chỉ không thể để trống.');
+        return $validator;
+    }
+
     /**
      * Returns a rules checker object that will be used for validating
      * application integrity.

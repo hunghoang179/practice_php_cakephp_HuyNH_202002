@@ -36,29 +36,18 @@
                             <a href=<?= $this->Url->build(['controller'=>'homes','action'=>'listUser']) ?> class="nav-link">DS Tài khoản</a>
                         </li>
                         <li class="navbar-item">
-<!--                            <div class="btn-group">-->
-<!--                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--                                    Action-->
-<!--                                </button>-->
-<!--                                <div class="dropdown-menu">-->
-<!--                                    <a class="dropdown-item" href="#">Action</a>-->
-<!--                                    <a class="dropdown-item" href="#">Another action</a>-->
-<!--                                    <a class="dropdown-item" href="#">Something else here</a>-->
-<!--                                    <div class="dropdown-divider"></div>-->
-<!--                                    <a class="dropdown-item" href="#">Separated link</a>-->
-<!--                                </div>-->
-<!--                            </div>-->
                             <?php
                             if ($username){
-                                echo $this->Html->link(
-                                    $username,
-                                    ['controller' => 'users', 'action' => 'logout'],
-                                    array(
-                                        'data-toggle' => 'tooltip',
-                                        'data-placement' => 'bottom',
-                                        'title' => 'Đăng xuất'
-                                    )
-                                );
+                                echo '<div class="dropdown show">
+                                        <a class="dropdown-toggle" href="" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            '.$username.'
+                                        </a>
+
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href='.$this->Url->build(['controller'=>'users','action'=>'logout']).'>Đăng xuất</a>
+                                            <a class="dropdown-item" href='.$this->Url->build(['controller'=>'users','action'=>'updateUser']).'>Thông tin cá nhân</a>
+                                        </div>
+                                    </div>';
                             }
                             else{
                                 echo $this->Html->link(
