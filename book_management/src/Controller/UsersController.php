@@ -146,7 +146,7 @@ class UsersController extends AppController{
                             ->setTo($email)
                             ->setSubject('Reset mật khẩu')
                             ->setFrom('huynguyenhuubk2.02.3@gmail.com')
-                            ->deliver('Xin chào <strong>'.$total_name.'</strong><br/>Mật khẩu mới của bạn là: '.$newPass.'<br/>Vui long đăng nhập và đổi lại mật khẩu.');
+                            ->deliver('Xin chào <strong>'.$total_name.'</strong><br/>Mật khẩu mới của bạn là: '.$newPass.'<br/>Vui lòng đăng nhập và đổi lại mật khẩu.');
                         return $this->redirect(['controller' => 'Users', 'action' => 'notificationResetPassword']);
                     }else{
                         $this->Flash->error('Reset mật khẩu không thành công! Vui lòng thử lại.');
@@ -272,6 +272,79 @@ class UsersController extends AppController{
                 }
             }
 //            dd($this->request->getData());
+        }
+    }
+
+    public function lock(){
+        $this->viewBuilder()->setLayout('master');
+        $id=$this->request->getParam('id');
+        $articles = TableRegistry::getTableLocator()->get('Users');
+        $user = $articles->find()
+            ->where(['id' => $id])
+            ->first();
+        $user->status=3;
+        if ($this->Users->save($user)){
+            $this->Flash->success('Đã khóa tài khoản '.$user->email.' thành công.');
+        }else{
+            $this->Flash->error('Khóa tài khoản thất bại.');
+        }
+        return $this->redirect(['controller' => 'Homes', 'action' => 'listUser']);
+    }
+
+
+    public function unLock(){
+        $this->viewBuilder()->setLayout('master');
+        $id=$this->request->getParam('id');
+        $articles = TableRegistry::getTableLocator()->get('Users');
+        $user = $articles->find()
+            ->where(['id' => $id])
+            ->first();
+        $user->status=1;
+        if ($this->Users->save($user)){
+            $this->Flash->success('Đã mở khóa tài khoản '.$user->email.' thành công.');
+        }else{
+            $this->Flash->error('Mở khóa tài khoản thất bại.');
+        }
+        return $this->redirect(['controller' => 'Homes', 'action' => 'listUser']);
+    }
+
+    public function edit(){
+        $this->viewBuilder()->setLayout('master');
+        $id=$this->request->getParam('id');
+        $articles = TableRegistry::getTableLocator()->get('Users');
+        $user = $articles->find()
+            ->where(['id' => $id])
+            ->first();
+
+        $articles_role = TableRegistry::getTableLocator()->get('Roles');
+        $role=$articles_role->find('all');
+        $this->set(['user'=>$user,'roles'=>$role]);
+        if ($this->request->is('post')){
+            $errors = $this->Users->newEntity($this->request->getData(), ['validate' => 'Edit']);
+            if ($errors->hasErrors()!==true){
+                $total_name=$this->request->getData('total_name');
+                $phone=$this->request->getData('phone');
+                $address=$this->request->getData('address');
+                $password=$this->request->getData('password');
+                $password_en=Security::hash($password,'md5',true);
+                $role=$this->request->getData('role');
+                $user->total_name=$total_name;
+                $user->phone=$phone;
+                $user->address=$address;
+                $user->password=$password_en;
+                $user->role=$role;
+                if ($this->Users->save($user)){
+                    $this->Flash->success('Sửa tài khoản '.$total_name.' thành công.');
+                }else{
+                    $this->Flash->error('Sửa khóa tài khoản thất bại.');
+                }
+            }
+            else{
+                $errors_arr=$errors->getErrors();
+                $error=reset($errors_arr);
+                $error_first=reset($error);
+                $this->Flash->error($error_first);
+            }
         }
     }
 }

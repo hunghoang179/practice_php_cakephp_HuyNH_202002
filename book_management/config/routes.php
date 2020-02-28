@@ -70,15 +70,20 @@ $routes->scope('/', function (RouteBuilder $builder) {
     $builder->connect('/reset-password', ['controller' => 'Users', 'action' => 'resetPassword']);
     $builder->connect('/reset-password/notification', ['controller' => 'Users', 'action' => 'notificationResetPassword']);
     $builder->connect('/update-user', ['controller' => 'Users', 'action' => 'updateUser']);
+    $builder->connect('/edit/{id}', ['controller' => 'Users', 'action' => 'edit']);
+    $builder->connect('/lock/{id}', ['controller' => 'Users', 'action' => 'lock']);
+    $builder->connect('/un-lock/{id}', ['controller' => 'Users', 'action' => 'unLock']);
     $builder->connect('/list-user', ['controller' => 'Homes', 'action' => 'listUser']);
     $builder->connect('/about', ['controller' => 'Homes', 'action' => 'about']);
     $builder->connect('/faq', ['controller' => 'Homes', 'action' => 'faq']);
     $builder->connect('/list-borrow', ['controller' => 'Homes', 'action' => 'listBorrow']);
     $builder->connect('/list-book', ['controller' => 'Homes', 'action' => 'book']);
-    $builder->connect('/books/detail', ['controller' => 'Books', 'action' => 'detail']);
+    $builder->connect('/books/detail/{id}', ['controller' => 'Books', 'action' => 'detail']);
     $builder->connect('/books/add', ['controller' => 'Books', 'action' => 'add']);
+    $builder->connect('/books/list', ['controller' => 'Books', 'action' => 'list']);
     $builder->connect('/category/list', ['controller' => 'Categories', 'action' => 'listCategory']);
     $builder->connect('/category/add', ['controller' => 'Categories', 'action' => 'add']);
+    $builder->connect('/category/delete', ['controller' => 'Categories', 'action' => 'delete']);
 
     /*
      * ...and connect the rest of 'Pages' controller's URLs.

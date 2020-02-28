@@ -24,7 +24,7 @@
                             <a href=<?= $this->Url->build(['controller'=>'users','action'=>'home']) ?> class="nav-link">Trang chủ</a>
                         </li>
                         <li class="navbar-item">
-                            <a href=<?= $this->Url->build(['controller'=>'homes','action'=>'book']) ?> class="nav-link">Sách</a>
+                            <a href=<?= $this->Url->build(['controller'=>'Books','action'=>'list']) ?> class="nav-link">Sách</a>
                         </li>
                         <li class="navbar-item">
                             <a href=<?= $this->Url->build(['controller'=>'homes','action'=>'about']) ?> class="nav-link">Giới thiệu</a>
@@ -46,6 +46,7 @@
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                             <a class="dropdown-item" href='.$this->Url->build(['controller'=>'users','action'=>'logout']).'>Đăng xuất</a>
                                             <a class="dropdown-item" href='.$this->Url->build(['controller'=>'users','action'=>'updateUser']).'>Thông tin cá nhân</a>
+                                            <a class="dropdown-item" href='.$this->Url->build(['controller'=>'Categories','action'=>'listCategory']).'>Thể loại sách</a>
                                         </div>
                                     </div>';
                             }

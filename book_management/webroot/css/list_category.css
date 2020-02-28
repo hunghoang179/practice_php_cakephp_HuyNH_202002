@@ -10,7 +10,7 @@
     padding: 2px 5px;
     color: #fff;
     border: 2px solid #fff;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     font-size: 1.1rem;
     cursor: pointer;
 }
@@ -20,3 +20,6 @@ table.list-user thead th{
     background: #a9a9a959;
 }
 
+.container div.message.success, .container div.message.error{
+    margin-bottom: 30px;
+}

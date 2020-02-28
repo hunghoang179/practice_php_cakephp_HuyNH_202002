@@ -1,5 +1,8 @@
-.btn-delete{
+.btn-delete, .btn-lock{
     background: #da1111;
+}
+.btn-unlock{
+    background: #3a9429;
 }
 
 .btn-edit{
@@ -13,6 +16,10 @@
     border-radius: 5px;
     font-size: 1.1rem;
     cursor: pointer;
+}
+
+table.list-user{
+    font-size: 0.9rem;
 }
 
 

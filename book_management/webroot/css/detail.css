@@ -1,0 +1,23 @@
+.book-info{
+    position: absolute;
+    bottom: 0;
+}
+
+.product-sec .slider-sec{
+    width: auto !important;
+    max-width: none;
+    flex: none;
+}
+
+.product-sec .slider-content ul{
+    width: 400px !important;
+}
+
+.img-fluid{
+    height: 450px;
+    width: 360px;
+}
+.recomended-sec .item img{
+    height: 218px;
+    width: 140px;
+}

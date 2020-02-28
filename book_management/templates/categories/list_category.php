@@ -6,8 +6,10 @@
         <a class="add-content" href=<?= $this->Url->build(['controller'=>'Categories','action'=>'add']) ?>>Thêm danh mục</a>
     </div>
 </div>
+
 <section class="static about-sec">
     <div class="container">
+        <?= $this->Flash->render() ?>
         <table class="table table-striped list-user">
             <thead>
             <tr>
@@ -19,27 +21,22 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Sức khỏe</td>
-                <td class="number-borrow"><span>5</span></td>
-                <td>Sách có nội dung về các vấn đề sức khỏe của con người.</td>
-                <td><button class="btn-action btn-delete">Xóa</button><button class="btn-action btn-edit">Sửa</button></td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Sức khỏe</td>
-                <td class="number-borrow"><span>5</span></td>
-                <td>Sách có nội dung về các vấn đề sức khỏe của con người.</td>
-                <td><button class="btn-action btn-delete">Xóa</button><button class="btn-action btn-edit">Sửa</button></td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Sức khỏe</td>
-                <td class="number-borrow"><span>5</span></td>
-                <td>Sách có nội dung về các vấn đề sức khỏe của con người.</td>
-                <td><button class="btn-action btn-delete">Xóa</button><button class="btn-action btn-edit">Sửa</button></td>
-            </tr>
+            <?php
+            foreach ($categories as $category):
+                ?>
+                <tr>
+                    <th scope="row"><?php echo $category->id ?></th>
+                    <td><?php echo $category->name ?></td>
+                    <td class="number-borrow"><span><?php echo $category->total_book ?></span></td>
+                    <td><?php echo $category->description ?></td>
+                    <td>
+                        <?php echo $this->Form->postLink('Xóa',['action'=>'delete',$category->id],['class'=>'btn-action btn-delete','confirm'=>'Bạn có chắc chắn']) ?>
+                        <?php echo $this->Html->Link('Sửa',['action'=>'edit',$category->id],['class'=>'btn-action btn-edit']) ?>
+                    </td>
+                </tr>
+            <?php
+            endforeach;
+            ?>
             </tbody>
         </table>
     </div>

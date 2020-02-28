@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/book_management/tests" isTestSource="true" packagePrefix="App\Test\" />
       <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/aura/intl" />
+      <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/cakephp/authentication" />
       <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/cakephp/bake" />
       <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/cakephp/cakephp" />
       <excludeFolder url="file://$MODULE_DIR$/book_management/vendor/cakephp/cakephp-codesniffer" />
